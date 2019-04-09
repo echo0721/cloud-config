@@ -1,0 +1,23 @@
+
+server:
+  port: 8090
+spring:
+  application:
+    name: gms-pro-server
+  cloud:
+    zookeeper:
+      connect-string: 192.168.1.160:2181,192.168.1.160:2182,192.168.1.160:2183
+  datasource:
+    url: jdbc:h2:mem:gms-pro
+    username: test
+    password: test
+  h2:
+    console:
+      enabled: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mapper/*Mapper.xml
+mapper:
+  identity: H2
+  not-empty: true
